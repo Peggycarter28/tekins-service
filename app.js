@@ -1,8 +1,11 @@
 document.getElementById("year").textContent = new Date().getFullYear();
-const hamburger = document.querySelector(".hamburger-menu");
+const mobileNav = document.querySelector(".mobile-nav");
+const nav = document.querySelector("nav");
+const logo = document.querySelector(".logo");
+const hamburgerActive = document.querySelector(".hamburger-active");
+const hamburgerSpan = document.querySelector(".hamburger-span");
 
 window.addEventListener("scroll", function () {
-  const mobileNav = this.document.querySelector(".mobile-nav");
   const navBar = document.querySelector("nav");
   if (window.scrollY > 0) {
     mobileNav.classList.add("nav-scrolled");
@@ -13,13 +16,11 @@ window.addEventListener("scroll", function () {
   }
 });
 
-hamburger.addEventListener("click", function () {
-  const mobileNav = this.document.querySelector(".mobile-nav");
-  if (mobileNav.classList.contains("nav-open")) {
-    mobileNav.classList.remove("nav-open");
-    hamburger.setAttribute("aria-expanded", "false");
-  } else {
-    mobileNav.classList.add("nav-open");
-    hamburger.setAttribute("aria-expanded", "true");
-  }
+hamburgerSpan.addEventListener("click", function () {
+  hamburgerActive.classList.toggle("active");
+  hamburgerSpan.classList.toggle("hamburger-span-active");
+  nav.classList.toggle("active");
+  // nav.appendChild("mobile-nav.active");
+  mobileNav.classList.toggle("active");
+  logo.style.display = "none";
 });
