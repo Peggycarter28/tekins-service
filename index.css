@@ -57,12 +57,10 @@ nav ul li:hover {
   position: fixed;
   z-index: 1;
   width: 100%;
-  /* padding: 3rem; */
   height: 8vh;
   left: 0;
   top: 0;
   cursor: pointer;
-  /* color: var(--tekins-green); */
   display: none;
 }
 nav {
@@ -266,8 +264,8 @@ footer {
     margin-bottom: 1rem;
   }
   .logo {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   .hamburger-span {
@@ -362,7 +360,7 @@ footer {
   }
   .mobile-nav {
     width: 100%;
-    padding: 2rem;
+    padding: 0.7rem;
     display: flex;
     transition: var(--transition-1s);
   }
